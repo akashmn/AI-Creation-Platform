@@ -11,7 +11,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'off-black': '#0D0E11',
+        'noble-blue-400': '#686B6E',
+        'noble-black-700': '#131619',
+        'noble-black-800': '#0D0F10',
+        'stem-green-500': '#B6F09C',
+
       },
     },
   },

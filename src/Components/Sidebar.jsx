@@ -1,21 +1,27 @@
+//images import 
 import groupIcon from '../assets/group-icon.jpg'
+import dropdown from '../assets/dropdown.png'
+
 const Sidebar = () => {
   return (
-    <aside className='h-screen w-56 bg-off-black'>
+    <aside className='h-screen w-64 bg-noble-black-800 flex-10 flex-col p-3 rounded-xl'>
 
         {/* Group details section */}
 
-       <div className="groupname">
-            <img src={groupIcon} alt="group-icon" />
-            <div>
-                <p>Intellisys</p>
-                <p>12 member</p>
+       <div className="flex flex-row items-center justify-between">
+            <div className='flex flex-row gap-3'>
+                <img src={groupIcon} alt="group-icon" className='h-11 rounded-2xl' />
+                <div>
+                    <p className='text-[15px]'>Intellisys</p>
+                    <p className='text-xs text-stem-green-500'>12 members</p>
+                </div>
             </div>
+            <img src={dropdown} alt="dropdwon" className='h-2' />
        </div>
 
          {/* General section */}
        <div className='general'>
-            <p>General</p>
+            <p>GENERAL</p>
             <div>
                 <div>
                     <img src="" alt="search" />
