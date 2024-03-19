@@ -6,14 +6,17 @@ import searchBadge from '../assets/search-badge.png'
 import billing from '../assets/billing.png'
 import proj1 from '../assets/proj1.png'
 import addButton from '../assets/add-button.png'
+import avatar from '../assets/avatar.jpeg'
+import settingIcon from '../assets/settings.png'
 
 
 const Sidebar = () => {
   return (
     <aside className='h-screen w-72 bg-noble-black-800 rounded-xl'>
         <nav className='h-full flex flex-col divide-y-0 divide-noble-black-700'>
+
              {/* Group details section */}
-            <div className="flex flex-row items-center justify-between h-[96px] mx-4">
+            <div className="flex flex-row items-center justify-between h-[96px] mx-4 my-4">
                 <div className='flex flex-row gap-3'>
                     <img src={groupIcon} alt="group-icon" className='h-11 rounded-2xl' />
                     <div>
@@ -73,26 +76,28 @@ const Sidebar = () => {
                         
                         <div className="flex flex-row items-center gap-4 mx-2 mt-4">
                             <img src={addButton} alt="add-button" className='h-5'/>
-                            <p className='text-xs'>add new project</p>
+                            <p className='text-xs text-noble-black-400'>add new project</p>
                         </div>
-                    </div>
-                    
-                </div>
-                
+
+                    </div> 
+                </div> 
             </div>
 
             {/* user section */}
 
-            <div className="user">
-                <div>
-                    <img src="" alt="user" />
+            <div className="mt-24 border-none mx-3 flex flex-row items-center justify-between">
+                <div className='flex flex-row items-center gap-3'>
                     <div>
-                        <p>John Doe</p>
-                        <p>Premium</p>
+                        <img src={avatar} alt="user" className='h-11 rounded-xl'/>
+                        <div></div>
+                    </div>
+                    <div className='flex flex-col items-center justify-center'>
+                        <p className='text-sm'>John Doe</p>
+                        <p className='text-xs'>Premium</p>
                     </div>
                 </div>
                 <div className="settings">
-                    <img src="" alt="settings" />
+                    <img src={settingIcon} alt="settings"  className='h-5' />
                 </div>
             </div>
         </nav>
