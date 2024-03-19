@@ -4,6 +4,7 @@ import dropdown from '../assets/dropdown.png'
 import search from '../assets/search.png'
 import searchBadge from '../assets/search-badge.png'
 import billing from '../assets/billing.png'
+import proj1 from '../assets/proj1.png'
 
 
 const Sidebar = () => {
@@ -23,10 +24,10 @@ const Sidebar = () => {
             </div>
 
             {/* General section */}
-            <div className='h-[194px]'>
-                <div className='mx-4 my-4 flex flex-col gap-6'>
+            <div className='h-[180px]'>
+                <div className='mx-4 my-4 flex flex-col gap-5'>
                     <p className='text-xs text-noble-black-400'>GENERAL</p>
-                    <div className='flex flex-col gap-6'>
+                    <div className='flex flex-col gap-5'>
                         <div className='flex flex-row items-center justify-between'>
                             <div className='flex flex-row gap-5 items-center'>
                                 <img src={search} alt="search" className='h-5'/>
@@ -44,31 +45,34 @@ const Sidebar = () => {
 
             {/* Projects section */}
         
-            <div className="projects">
-
-                <p>Projects</p>
-                <div>
-                    <div>
-                        <img src="" alt="project" />
-                        <p>Orbital Oddysey</p>
+            <div className="h-614px">
+                <div className='mx-3 my-4 flex flex-col gap-4'>
+                    <p className='text-xs text-noble-black-400'>PROJECTS</p>
+                    <div className=''>
+                        <div className='flex flex-row items-center gap-2'>
+                            <img src={proj1} alt="project" className='h-9 mt-4'/>
+                            <p className='text-sm'>Orbital Oddysey</p>
+                        </div>
+                        <div>
+                            <img src="" alt="project" />
+                            <p>Digital Product Launch</p>
+                        </div>
+                        <div>
+                            <img src="" alt="project" />
+                            <p>Brand Refresh</p>
+                        </div>
+                        <div>
+                            <img src="" alt="project" />
+                            <p>Social Media Strategy</p>
+                        </div>
+                        <div className="add-project">
+                            <img src="" alt="project" />
+                            <p>add new project</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="" alt="project" />
-                        <p>Digital Product Launch</p>
-                    </div>
-                    <div>
-                        <img src="" alt="project" />
-                        <p>Brand Refresh</p>
-                    </div>
-                    <div>
-                        <img src="" alt="project" />
-                        <p>Social Media Strategy</p>
-                    </div>
+                    
                 </div>
-                <div className="add-project">
-                    <img src="" alt="project" />
-                    <p>Orbital Oddysey</p>
-                </div>
+                
             </div>
 
             {/* user section */}
