@@ -1,7 +1,7 @@
 import groupIcon from '../assets/group-icon.jpg'
 const Sidebar = () => {
   return (
-    <aside>
+    <aside className='h-screen w-56 bg-off-black'>
 
         {/* Group details section */}
 
