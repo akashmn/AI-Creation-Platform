@@ -48,23 +48,28 @@ const Sidebar = () => {
             <div className="h-614px">
                 <div className='mx-3 my-4 flex flex-col gap-4'>
                     <p className='text-xs text-noble-black-400'>PROJECTS</p>
-                    <div className=''>
-                        <div className='flex flex-row items-center gap-2'>
-                            <img src={proj1} alt="project" className='h-9 mt-4'/>
-                            <p className='text-sm'>Orbital Oddysey</p>
-                        </div>
-                        <div>
-                            <img src="" alt="project" />
-                            <p>Digital Product Launch</p>
-                        </div>
-                        <div>
-                            <img src="" alt="project" />
-                            <p>Brand Refresh</p>
-                        </div>
-                        <div>
-                            <img src="" alt="project" />
-                            <p>Social Media Strategy</p>
-                        </div>
+                    <div className='flex flex-col gap-3'>
+                        <button className='flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl'>
+                            <div className='flex flex-row items-center gap-2'>
+                                <img src={proj1} alt="project" className='h-9 mt-4'/>
+                                <p className='text-xs'>Orbital Oddysey</p>
+                            </div>
+                        </button>
+
+                        <button className='flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl'>
+                            <div className='flex flex-row items-center gap-2'>
+                                <img src={proj1} alt="project" className='h-9 mt-4'/>
+                                <p className='text-xs'>Orbital Oddysey</p>
+                            </div>
+                        </button>
+
+                        <button className='flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl'>
+                            <div className='flex flex-row items-center gap-2'>
+                                <img src={proj1} alt="project" className='h-9 mt-4'/>
+                                <p className='text-xs'>Orbital Oddysey</p>
+                            </div>
+                        </button>
+                        
                         <div className="add-project">
                             <img src="" alt="project" />
                             <p>add new project</p>
