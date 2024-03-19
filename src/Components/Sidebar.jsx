@@ -1,6 +1,10 @@
-//images import 
+//images-icon import 
 import groupIcon from '../assets/group-icon.jpg'
 import dropdown from '../assets/dropdown.png'
+import search from '../assets/search.png'
+import searchBadge from '../assets/search-badge.png'
+import billing from '../assets/billing.png'
+
 
 const Sidebar = () => {
   return (
@@ -20,16 +24,19 @@ const Sidebar = () => {
 
             {/* General section */}
             <div className='h-[194px]'>
-                <div className='mx-4 my-4 flex flex-col gap-4'>
+                <div className='mx-4 my-4 flex flex-col gap-6'>
                     <p className='text-xs text-noble-black-400'>GENERAL</p>
-                    <div>
-                        <div>
-                            <img src="" alt="search" />
-                            <p>Search</p>
+                    <div className='flex flex-col gap-6'>
+                        <div className='flex flex-row items-center justify-between'>
+                            <div className='flex flex-row gap-5 items-center'>
+                                <img src={search} alt="search" className='h-5'/>
+                                <p className='text-sm'>Search</p>
+                            </div>
+                            <img src={searchBadge} alt="" className='h-9' />
                         </div>
-                        <div>
-                            <img src="" alt="billing" />
-                            <p>Billing</p>
+                        <div className='flex flex-row items-center gap-5'>
+                            <img src={billing} alt="billing" className='h-5' />
+                            <p className='text-sm'>Billing</p>
                         </div>
                     </div>
                 </div>
