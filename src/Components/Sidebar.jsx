@@ -5,6 +5,7 @@ import search from '../assets/search.png'
 import searchBadge from '../assets/search-badge.png'
 import billing from '../assets/billing.png'
 import proj1 from '../assets/proj1.png'
+import addButton from '../assets/add-button.png'
 
 
 const Sidebar = () => {
@@ -70,9 +71,9 @@ const Sidebar = () => {
                             </div>
                         </button>
                         
-                        <div className="add-project">
-                            <img src="" alt="project" />
-                            <p>add new project</p>
+                        <div className="flex flex-row items-center gap-4 mx-2 mt-4">
+                            <img src={addButton} alt="add-button" className='h-5'/>
+                            <p className='text-xs'>add new project</p>
                         </div>
                     </div>
                     
