@@ -87,17 +87,17 @@ const Sidebar = () => {
 
             <div className="mt-24 border-none mx-3 flex flex-row items-center justify-between">
                 <div className='flex flex-row items-center gap-3'>
-                    <div>
-                        <img src={avatar} alt="user" className='h-11 rounded-xl'/>
-                        <div></div>
+                    <div  className='flex'>
+                        <img src={avatar} alt="user" className='h-11 rounded-xl z-0'/>
+                        <div className='h-6 w-6 rounded-full bg-stem-green-500 border-6 border-noble-black-700 -ml-4 -mt-2 z-10'></div>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <p className='text-sm'>John Doe</p>
-                        <p className='text-xs'>Premium</p>
+                        <p className='text-xs text-stem-green-500'>Premium</p>
                     </div>
                 </div>
                 <div className="settings">
-                    <img src={settingIcon} alt="settings"  className='h-5' />
+                    <img src={settingIcon} alt="settings"  className='h-5'/>
                 </div>
             </div>
         </nav>
