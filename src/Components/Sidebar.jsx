@@ -8,9 +8,16 @@ import proj1 from '../assets/proj1.png'
 import addButton from '../assets/add-button.png'
 import avatar from '../assets/avatar.jpeg'
 import settingIcon from '../assets/settings.png'
+import { useState } from 'react'
+
+
+
 
 
 const Sidebar = () => {
+
+    const [expanded, setExpanded] = useState(true)
+
   return (
     <aside className='h-screen w-72 bg-noble-black-800 rounded-xl'>
         <nav className='h-full flex flex-col divide-y-0 divide-noble-black-700'>
