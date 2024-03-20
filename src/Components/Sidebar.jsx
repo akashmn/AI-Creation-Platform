@@ -16,7 +16,7 @@ import { useState } from 'react'
 
 const Sidebar = () => {
 
-    const [expanded, setExpanded] = useState(true)
+    const [expanded, setExpanded] = useState(false)
 
   return (
     <aside className={`h-[695px] sm:h-[735px] bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
