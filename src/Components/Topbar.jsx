@@ -14,8 +14,8 @@ import libraryInactive from '../assets/library-inactive.png'
 
 const Topbar = () => {
   return (
-    <top className='w-full h-32 sm:h-40 bg-noble-black-800 rounded-xl'>
-        <nav  className='sm:h-full divide-y-2 divide-noble-black-700'>
+    <top className='w-[100%] sm:w-full h-32 sm:h-40 bg-noble-black-800 rounded-xl'>
+        <nav  className='sm:h-full sm:w-full divide-y-2 divide-noble-black-700'>
             {/* Top section */}
             <div className="flex flex-row justify-between items-center sm:h-3/5 sm:mx-5">
                 <div className="flex flex-col w-3/5">
