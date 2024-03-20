@@ -5,7 +5,7 @@ import Topbar from "../Components/Topbar"
 
 const Artificum = () => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row gap-2">
         <Sidebar />
         <Topbar />
     </div>
