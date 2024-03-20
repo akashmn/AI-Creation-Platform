@@ -19,7 +19,7 @@ const Sidebar = () => {
     const [expanded, setExpanded] = useState(false)
 
   return (
-    <aside className={`h-[695px] bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
+    <aside className={`h-[695px] sm:h-[735px] bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
         <nav className='h-full flex flex-col divide-y-0 divide-noble-black-700'>
 
              {/* Group details section */}
@@ -91,10 +91,6 @@ const Sidebar = () => {
                             </div>
                         </button>
 
-                        
-
-                        
-                        
                         <div className="flex flex-row items-center gap-4 mx-2 mt-4">
                             <img src={addButton} alt="add-button" className='h-5'/>
                             <p className={`text-xs text-noble-black-400 ${expanded ? '' : 'hidden'}`}>add new project</p>
