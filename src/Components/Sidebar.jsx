@@ -60,33 +60,21 @@ const Sidebar = () => {
             {/* Projects section */}
         
             <div className="h-614px">
-                <div className='mx-3 my-4 flex flex-col gap-4'>
-                    <p className='text-xs text-noble-black-400'>PROJECTS</p>
-                    <div className='flex flex-col gap-3'>
-                        <button className='flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl'>
+                <div className={`mx-3 my-4 flex flex-col gap-4 ${expanded ? '' : 'mx-0'}`}>
+                    <p className={`text-xs text-noble-black-400 ${expanded ? '' : 'hidden'}`}>PROJECTS</p>
+                    <div className={`flex flex-col gap-3 ${expanded ? '' : 'mt-9'}`}>
+                        <button className={`flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl ${expanded ? '' : 'w-11'}`}>
                             <div className='flex flex-row items-center gap-2'>
                                 <img src={proj1} alt="project" className='h-9 mt-4'/>
-                                <p className='text-xs'>Orbital Oddysey</p>
+                                <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Orbital Oddysey</p>
                             </div>
                         </button>
 
-                        <button className='flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl'>
-                            <div className='flex flex-row items-center gap-2'>
-                                <img src={proj1} alt="project" className='h-9 mt-4'/>
-                                <p className='text-xs'>Orbital Oddysey</p>
-                            </div>
-                        </button>
-
-                        <button className='flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl'>
-                            <div className='flex flex-row items-center gap-2'>
-                                <img src={proj1} alt="project" className='h-9 mt-4'/>
-                                <p className='text-xs'>Orbital Oddysey</p>
-                            </div>
-                        </button>
+                        
                         
                         <div className="flex flex-row items-center gap-4 mx-2 mt-4">
                             <img src={addButton} alt="add-button" className='h-5'/>
-                            <p className='text-xs text-noble-black-400'>add new project</p>
+                            <p className={`text-xs text-noble-black-400 ${expanded ? '' : 'hidden'}`}>add new project</p>
                         </div>
 
                     </div> 
