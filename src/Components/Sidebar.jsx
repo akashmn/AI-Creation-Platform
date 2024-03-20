@@ -19,7 +19,7 @@ const Sidebar = () => {
     const [expanded, setExpanded] = useState(false)
 
   return (
-    <aside className={`h-screen bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
+    <aside className={`h-[695px] bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
         <nav className='h-full flex flex-col divide-y-0 divide-noble-black-700'>
 
              {/* Group details section */}
@@ -60,15 +60,38 @@ const Sidebar = () => {
             {/* Projects section */}
         
             <div className="h-614px">
-                <div className={`mx-3 my-4 flex flex-col gap-4 ${expanded ? '' : 'mx-0'}`}>
+                <div className={`mx-3 my-4 flex flex-col gap-4 ${expanded ? '' : '-mx-[1px]'}`}>
                     <p className={`text-xs text-noble-black-400 ${expanded ? '' : 'hidden'}`}>PROJECTS</p>
                     <div className={`flex flex-col gap-3 ${expanded ? '' : 'mt-9'}`}>
-                        <button className={`flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl ${expanded ? '' : 'w-11'}`}>
+                        <button className={`flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl ${expanded ? '' : 'w-10'}`}>
                             <div className='flex flex-row items-center gap-2'>
                                 <img src={proj1} alt="project" className='h-9 mt-4'/>
                                 <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Orbital Oddysey</p>
                             </div>
                         </button>
+
+                        <button className={`flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl ${expanded ? '' : 'w-10'}`}>
+                            <div className='flex flex-row items-center gap-2'>
+                                <img src={proj1} alt="project" className='h-9 mt-4'/>
+                                <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Orbital Oddysey</p>
+                            </div>
+                        </button>
+
+                        <button className={`flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl ${expanded ? '' : 'w-10'}`}>
+                            <div className='flex flex-row items-center gap-2'>
+                                <img src={proj1} alt="project" className='h-9 mt-4'/>
+                                <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Orbital Oddysey</p>
+                            </div>
+                        </button>
+
+                        <button className={`flex items-center h-9 w-60 bg-gradient-to-r from-[#D7EDED29] to-[#CCEBEB00] rounded-xl ${expanded ? '' : 'w-10'}`}>
+                            <div className='flex flex-row items-center gap-2'>
+                                <img src={proj1} alt="project" className='h-9 mt-4'/>
+                                <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Orbital Oddysey</p>
+                            </div>
+                        </button>
+
+                        
 
                         
                         
@@ -83,23 +106,23 @@ const Sidebar = () => {
 
             {/* user section */}
 
-            <div className="mt-24 border-none mx-3 flex flex-row items-center justify-between">
+            <div className={`bottom-0 border-none flex flex-row items-center justify-between ${expanded ? 'mx-4' : ''}`}>
                 <div className='flex flex-row items-center gap-3'>
                     <div  className='flex'>
-                        <img src={avatar} alt="user" className='h-11 rounded-xl z-0'/>
-                        <div className='h-6 w-6 rounded-full bg-stem-green-500 border-6 border-noble-black-700 -ml-4 -mt-2 z-10'></div>
+                        <img src={avatar} alt="user" className='h-8 rounded-xl z-0'/>
+                        <div className='h-5 w-5 rounded-full bg-stem-green-500 border-6 border-noble-black-700 -ml-4 -mt-2 z-10'></div>
                     </div>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className={`flex flex-col items-center justify-center ${expanded ? '' : 'hidden'}`}>
                         <p className='text-sm'>John Doe</p>
                         <p className='text-xs text-stem-green-500'>Premium</p>
                     </div>
                 </div>
                 <div className="settings">
-                    <img src={settingIcon} alt="settings"  className='h-5'/>
+                    <img src={settingIcon} alt="settings"  className={`h-5 ${expanded ? '' : 'hidden'}`}/>
                 </div>
             </div>
-        </nav>
 
+        </nav>
     </aside>
   )
 }
