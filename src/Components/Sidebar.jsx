@@ -16,39 +16,42 @@ import { useState } from 'react'
 
 const Sidebar = () => {
 
-    const [expanded, setExpanded] = useState(true)
+    const [expanded, setExpanded] = useState(false)
 
   return (
-    <aside className='h-screen w-72 bg-noble-black-800 rounded-xl'>
+    <aside className={`h-screen bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
         <nav className='h-full flex flex-col divide-y-0 divide-noble-black-700'>
 
              {/* Group details section */}
-            <div className="flex flex-row items-center justify-between h-[96px] mx-4 my-4">
+            <div className={`flex flex-row items-center justify-between h-[96px] ${expanded ? 'm-4' : 'my-4'}`}>
                 <div className='flex flex-row gap-3'>
-                    <img src={groupIcon} alt="group-icon" className='h-11 rounded-2xl' />
-                    <div>
+                    <button className=''
+                    onClick={() => setExpanded((curr) => !curr)}>
+                    <img src={groupIcon} alt="group-icon" className={`h-11 rounded-2xl ${expanded ? '' : 'h-11 w-12'}`} />
+                    </button>
+                    <div className={`flex flex-col justify-center ${expanded ? 'text' : 'overflow-hidden hidden'}`}>
                         <p className='text-sm'>Intellisys</p>
                         <p className='text-xs text-stem-green-500'>12 members</p>
                     </div>
-                 </div>
-                <img src={dropdown} alt="dropdwon" className='h-2' />
+                </div>
+                <img src={dropdown} alt="dropdwon" className={`h-2 ${expanded ? '' : 'hidden'}`} />
             </div>
 
             {/* General section */}
             <div className='h-[180px]'>
-                <div className='mx-4 my-4 flex flex-col gap-5'>
-                    <p className='text-xs text-noble-black-400'>GENERAL</p>
-                    <div className='flex flex-col gap-5'>
+                <div className={`flex flex-col gap-5 ${expanded ? '' : 'my-5 mx-1'}`}>
+                    <p className={`text-xs text-noble-black-400 ${expanded ? '' : 'hidden'}`}>GENERAL</p>
+                    <div className={`flex flex-col gap-5 ${expanded ? 'mx-4' : 'gap-5 my-10'}`}>
                         <div className='flex flex-row items-center justify-between'>
                             <div className='flex flex-row gap-5 items-center'>
-                                <img src={search} alt="search" className='h-5'/>
-                                <p className='text-sm'>Search</p>
+                                <img src={search} alt="search" className={`h-5 ${expanded ? '' : ''}`}/>
+                                <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Search</p>
                             </div>
-                            <img src={searchBadge} alt="" className='h-9' />
+                            <img src={searchBadge} alt="" className={`h-9 ${expanded ? '' : 'hidden'}`} />
                         </div>
                         <div className='flex flex-row items-center gap-5'>
                             <img src={billing} alt="billing" className='h-5' />
-                            <p className='text-sm'>Billing</p>
+                            <p className={`text-sm ${expanded ? '' : 'hidden'}`}>Billing</p>
                         </div>
                     </div>
                 </div>
