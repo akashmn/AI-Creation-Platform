@@ -13,6 +13,7 @@ export default {
       colors: {
         'noble-black-300': '#9B9C9E',
         'noble-black-400': '#686B6E',
+        'noble-black-500': '#363A3D',
         'noble-black-700': '#131619',
         'noble-black-800': '#0D0F10',
 
