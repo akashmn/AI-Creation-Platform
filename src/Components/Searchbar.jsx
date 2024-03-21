@@ -32,7 +32,8 @@ const Searchbar = () => {
             }
         )
         let data = await response.json()
-        console.log(data)
+        let data_array = data.data;
+        setImageUrl(data_array[1].url)
     }
 
   return (
