@@ -1,14 +1,14 @@
-
+import { useContext } from 'react'
 import attach from '../assets/attachment-icon.png'
 import mic from '../assets/microphone.png'
 import submit from '../assets/submit-button.png'
-
+import { Context } from '../Context/Context'
 // import demo from '../assets/demo-image.jpeg'
 // import { useRef, useState } from 'react'
 
 const Searchbar = () => {
 
-    
+    const { onSent, recentPrompts, showResult, loading, resultData, setInput, input } = useContext(Context)
 
     // const [image_url, setImageUrl] = useState('/')
 
