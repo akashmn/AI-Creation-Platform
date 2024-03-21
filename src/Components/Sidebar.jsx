@@ -19,7 +19,7 @@ const Sidebar = () => {
     const [expanded, setExpanded] = useState(false)
 
   return (
-    <aside className={`h-[695px] sm:h-[735px] bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
+    <aside className={`h-screen bg-noble-black-800 rounded-xl ${expanded ? 'w-72' : 'w-14'}`}>
         <nav className='h-full flex flex-col divide-y-0 divide-noble-black-700'>
 
              {/* Group details section */}
@@ -83,7 +83,7 @@ const Sidebar = () => {
 
             {/* user section */}
 
-            <div className={`bottom-2 fixed mt-6 sm:mt-24 border-none flex flex-row items-center ${expanded ? 'mx-4 justify-between gap-20' : 'mx-1'}`}>
+            <div className={`mt-40 sm:mt-52 border-none flex flex-row items-center justify-center ${expanded ? 'mx-4 justify-between gap-20' : ''}`}>
                 <div className='flex flex-row items-center gap-3'>
                     <div  className='flex'>
                         <img src={avatar} alt="user" className='h-8 rounded-xl z-0'/>
