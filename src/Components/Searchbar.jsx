@@ -8,7 +8,7 @@ import { Context } from '../Context/Context'
 
 const Searchbar = () => {
 
-    const { onSent, showResults, resultData, setInput, input, setShowResults } = useContext(Context)
+    const { onSent, showResults, resultData, setInput, input } = useContext(Context)
 
   return (
     <div>
@@ -17,8 +17,8 @@ const Searchbar = () => {
         <div className='text-4xl'>
             hello
         </div> : 
-        <div>
-            <p dangerouslySetInnerHTML={{__html:resultData}} />
+        <div className='sm:m-5'>
+            <p dangerouslySetInnerHTML={{__html:resultData}} className='mx text-xs sm:text-sm text-noble-black-300' />
         </div> }
         {/* generated image here */}
         {/* <div className="flex flex-col mt-16 sm:mt-24 items-center justify-center">
@@ -28,14 +28,14 @@ const Searchbar = () => {
             <button>
             <img src={mic} alt="microphone" className='h-5'/>
             </button>
-            <div className="search-area">
+            <div className="">
                 {/* search area here */}
                 <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='You can ask me anything! I am here to help.' className='w-[157px] sm:w-[1200px] bg-transparent placeholder:text-xs text-xs placeholder:text-noble-black-500'/>
             </div>
             <button>
                 <img src={attach} alt="attachment-pin" className='h-5'/>
             </button>
-            <button onClick={() => setShowResults(!showResults)} >
+            <button >
                 <img onClick={() => onSent()} src={submit} alt="submit-button" className='h-8' />
             </button>
      </div>
