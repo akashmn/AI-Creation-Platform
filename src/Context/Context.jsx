@@ -11,7 +11,7 @@ const ContextProvider = (props) => {
     const [loading, setLoading] = useState(false);
     const [resultData, setResultData] = useState('');
 
-    const onSent = async (prompt) => {
+    const onSent = async () => {
         setResultData('');
         setLoading(true);
         setShowResults(true);

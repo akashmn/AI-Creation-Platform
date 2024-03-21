@@ -8,7 +8,7 @@ import { Context } from '../Context/Context'
 
 const Searchbar = () => {
 
-    const { onSent, recentPrompts, showResults, loading, resultData, setInput, input, setShowResults } = useContext(Context)
+    const { onSent, showResults, resultData, setInput, input, setShowResults } = useContext(Context)
 
     // const [image_url, setImageUrl] = useState('/')
 
