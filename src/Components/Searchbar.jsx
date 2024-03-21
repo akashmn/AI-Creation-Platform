@@ -10,36 +10,6 @@ const Searchbar = () => {
 
     const { onSent, showResults, resultData, setInput, input, setShowResults } = useContext(Context)
 
-    // const [image_url, setImageUrl] = useState('/')
-
-    // let inputRef = useRef(null)
-
-    // const imageGenerator = async () => {
-    //     if(inputRef.current.value === ''){
-    //         alert('Please enter a valid search query')
-    //         return 0
-    //     }
-    //     const response = await fetch (
-    //         "https://api.openai.com/v1/images/generations",
-    //         {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 "Authorization": "Bearer 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",
-    //                 "User-Agent": "Chrome",
-    //             },
-    //             body:JSON.stringify({
-    //                 "prompt": `${inputRef.current.value}`,
-    //                 n : 1,
-    //                 size: "256x256"
-    //             }),
-    //         }
-    //     )
-    //     let data = await response.json()
-    //     let data_array = data.data;
-    //     setImageUrl(data_array[1].url)
-    // }
-
   return (
     <div>
         {!showResults ? 
