@@ -1,23 +1,28 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import runChat from "../config/gemini";
 
 export const Context = createContext();
 
 const ContextProvider = (props) => {
-
-    const [input, setInput] = useState('')
-    const [recentPrompt, setRecentPrompt] = useState('')
-    const [previousPrompts, setPreviousPrompts] = useState([])
-    const [showResults, setShowResults] = useState(false)
-    const [loading, setLoading] = useState(false)
-    const [resultData, setResultData] = useState("")
-
+    const [input, setInput] = useState('');
+    const [recentPrompt, setRecentPrompt] = useState('');
+    const [previousPrompts, setPreviousPrompts] = useState([]);
+    const [showResults, setShowResults] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [resultData, setResultData] = useState('');
 
     const onSent = async (prompt) => {
-        await runChat(prompt)
-    }
+        setResultData('');
+        setLoading(true);
+        setShowResults(true);
+        const response = await runChat(input);
+        setResultData(response);
+        setLoading(false);
+    };
 
-    onSent('what is react.js')
+    useEffect(() => {
+        onSent(prompt);
+    }, []); // Empty dependency array ensures the effect runs only once
 
     const contextValue = {
         previousPrompts,
@@ -29,14 +34,14 @@ const ContextProvider = (props) => {
         setInput,
         showResults,
         resultData,
-        loading,    
-    }
+        loading,
+    };
 
     return (
         <Context.Provider value={contextValue}>
             {props.children}
         </Context.Provider>
-    )
-}
+    );
+};
 
-export default ContextProvider
+export default ContextProvider;

@@ -8,7 +8,7 @@ import { Context } from '../Context/Context'
 
 const Searchbar = () => {
 
-    const { onSent, recentPrompts, showResult, loading, resultData, setInput, input } = useContext(Context)
+    const { onSent, recentPrompts, showResults, loading, resultData, setInput, input, setShowResults } = useContext(Context)
 
     // const [image_url, setImageUrl] = useState('/')
 
@@ -42,6 +42,14 @@ const Searchbar = () => {
 
   return (
     <div>
+        {!showResults ? 
+        
+        <div className='text-4xl'>
+            hello
+        </div> : 
+        <div>
+            <p dangerouslySetInnerHTML={{__html:resultData}} />
+        </div> }
         {/* generated image here */}
         {/* <div className="flex flex-col mt-16 sm:mt-24 items-center justify-center">
             <img src={image_url === "/" ? demo : image_url} alt="" className='h-52 w-56 sm:h-72 sm:w-80'/>
@@ -52,13 +60,13 @@ const Searchbar = () => {
             </button>
             <div className="search-area">
                 {/* search area here */}
-                <input type="text" placeholder='You can ask me anything! I am here to help.' className='w-[157px] sm:w-[1200px] bg-transparent placeholder:text-xs text-xs placeholder:text-noble-black-500'/>
+                <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='You can ask me anything! I am here to help.' className='w-[157px] sm:w-[1200px] bg-transparent placeholder:text-xs text-xs placeholder:text-noble-black-500'/>
             </div>
             <button>
                 <img src={attach} alt="attachment-pin" className='h-5'/>
             </button>
-            <button>
-                <img src={submit} alt="submit-button" className='h-8' />
+            <button onClick={() => setShowResults(!showResults)} >
+                <img onClick={() => onSent()} src={submit} alt="submit-button" className='h-8' />
             </button>
      </div>
     </div>
